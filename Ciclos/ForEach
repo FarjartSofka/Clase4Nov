@@ -1,0 +1,49 @@
+const myArray = [1,2,3,4,5];
+
+myArray.forEach(function(item) {
+  console.log(item);
+});
+
+//Ejemplo
+
+nombres = ["anna", "beth", "chris", "daniel", "ethan"]
+
+function pasarLista(nombre, indice) {
+    console.log(`Está el numero de estudiante ${indice + 1}  -${nombre} - presente? Sí!`)
+    ;}
+
+nombres.forEach((nombre, indice) => pasarLista(nombre, indice));
+
+//Ejemplo 
+
+nombres = [
+    {nombre:"anna",pronombre: "ella"},
+    {nombre: "beth",pronombre: "elle"},
+    {nombre:"chris",pronombre: "él"},
+    {nombre: "daniel",pronombre: "él"},
+    {nombre: "ethan",pronombre: "él"}
+]
+
+function pasarLista(estudiante, indice) {
+    console.log(`El número de estudiante  ${indice + 1} ${estudiante.nombre}. Está ${estudiante.pronombre} presente? Sí!`);
+}
+
+nombres.forEach((nombre, indice) => pasarLista(nombre, indice));
+
+//
+const numeros = [1, 2, 3, 4, 5];
+
+// Ejemplo con forEach
+const duplicadosForEach = [];
+numeros.forEach((numero) => {
+  duplicadosForEach.push(numero * 2);
+});
+console.log(duplicadosForEach); 
+// Output: [2, 4, 6, 8, 10]
+
+// Ejemplo con map
+const duplicadosMap = numeros.map((numero) => {
+  return numero * 2;
+});
+console.log(duplicadosMap); 
+// Output: [2, 4, 6, 8, 10]
